@@ -1,0 +1,237 @@
+html{
+    font-size: 62.5%; /* base 10px */
+}
+body{
+    background: #1c1c1c;
+    font: 1.3rem Arial, Helvetica, sans-serif;
+}
+a, a:hover, a:focus{
+    color: #1c1c1c;
+}
+
+/* maquette globale */
+
+.wrapper{
+    /*border: 2px tomato solid;*/
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.flex > div{
+    width: 50%;
+    /*border: 2px solid blue;*/
+}
+
+
+/* le header */
+header{
+    background: white url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAALElEQVQYlWNgQAOHDx/2RRfDqgCnQnQJDIW4dMLFCbmBoEKCVhJ0PNHBgAwA9tMpYb0aJqsAAAAASUVORK5CYII=);
+    background-size: 8px auto;
+}
+/* le logo du site */
+.logoSite{
+   /* border: 1px solid gold;*/
+    padding: 50px 0 0 44px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: 2.3rem;
+    background:  linear-gradient(to top, #ea9f05, transparent) no-repeat;
+    background-size: 5px 100%;
+}
+.logoSite small{
+    display: block;
+    margin-top: .5rem;
+    padding-bottom: 1.5rem;
+}
+.logoSite span{
+    color: #ea9f05;
+}
+
+/* la zone User Compte et Panier */
+.zoneUserCompte{
+    justify-content: space-around;
+    padding: 10px;
+    border: 2px solid #1c1c1c ;
+    margin-top: 36px;
+    background: rgba(229, 229, 229, 0.51);
+}
+.zoneUserCompte img{
+    margin-right: .5rem;
+}
+.UserName{
+    text-align: right;
+    font-size: 2.3rem;
+    margin-top: 14px;
+}
+.navSite{
+    /*border: 2px solid red;*/
+}
+.navSite ul{
+    margin-bottom: 0;
+}
+.navSite li{
+    padding: 1.2rem;
+    display: inline-block;
+    border-left: 1px solid #1c1c1c;
+}
+.navSite li:last-child{
+    border-right: 1px solid #1c1c1c;
+}
+
+
+/* le main */
+
+main .wrapper{
+    background: #f3f3f3;
+    padding-bottom: 4rem;
+}
+.banner{
+    max-width: 100%;
+}
+.zoneProduits{
+    justify-content: space-around;
+}
+.produit{
+    /*width: 380px;*/
+    /*conversion px vers %*/
+    /*(cible 380px / contexte 1000px) * 100 = résultat en %*/
+    width: 38.5%;
+    max-width: 380px;
+    margin: 3.8rem;
+}
+.produit figure{
+   /* border: 2px solid teal;*/
+    box-shadow: 0 0 5px gray;
+    position: relative;
+    background: white;
+    margin-bottom: 0;
+}
+.produit img{
+    max-width: 100%;
+    /*border: 2px crimson solid;*/
+}
+.produit figcaption{
+    position: absolute;
+    bottom:1.6rem;
+    width: 100%;
+}
+.produitTitre{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+.zonePrix{
+    align-items: center;
+}
+.btnVente{
+    background: black;
+    text-align: center;
+    color: white;
+    padding: .5rem 4rem;
+    margin-left: 1rem;
+}
+.btnVente:hover{
+    color: white;
+}
+.prix{
+    color: #ea9f05;
+    font-size: 3rem;
+    background: linear-gradient(to left, gray, transparent) no-repeat;
+    background-size: 100% 4px;
+    background-position: left bottom;
+    padding: 1rem;
+}
+.prix del{
+    color: #1c1c1c;
+    font-size: .5em;
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 2;
+}
+
+
+/* le footer */
+footer{
+    /*background: #373737;*/
+    color: white;
+    border-top: 2.4rem solid #373737;
+    position: relative;
+    top: -4.8rem;
+}
+.menuCgv{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f8f8f8 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAALElEQVQYlWNgQAOHDx/2RRfDqgCnQnQJDIW4dMLFCbmBoEKCVhJ0PNHBgAwA9tMpYb0aJqsAAAAASUVORK5CYII=);
+    background-size: 6px auto;
+    color: #1c1c1c;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 0 5px gray,
+    0 2px 3px rgba(128, 128, 128, 0.8) inset;
+    padding:0 2rem;
+    justify-content: space-around;
+}
+.menuCgv li{
+    padding: 2rem 1rem;
+}
+.menuCgv li:nth-last-child(1n + 2)::after{
+    content: '\26AB';
+    color: silver; /* TODO */
+    margin-left: 2rem;
+}
+.bigFooter{
+    background: #373737;
+    min-height: 35rem;
+    margin-top: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 5rem;
+}
+.livraison{
+    justify-content: center;
+}
+.livraison > div{
+    width: 15.6%; /*156px;*/
+    text-align: center;
+}
+.livraison img{
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+hr{
+    color: black;
+    background: black;
+    border-color: black;
+    width: 50%;
+}
+
+
+/* la média querie bonus pour les écrans medium et petit */
+
+@media screen and (max-width: 720px){
+
+    .wrapper{
+        width: 100%;
+    }
+
+}
+
+
+/* toolbox */
+
+.unstyled{
+    padding-left: 0;
+    list-style: none;
+}
+.mb0{
+    margin-bottom: 0;
+}
